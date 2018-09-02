@@ -3,7 +3,7 @@ import math
 from atoms_dist import atoms_dist
 
 
-def find_neighbors(ctrAtom, cutoff, POSCAR="POSCAR"):
+def find_neighbors(ctrAtom, cutoff, POSCAR = "POSCAR"):
     """ Return the coordinates of neighboring atoms.
 
     Use VASP 5 format POSCAR or CONTCAR files. Periodic boundary
