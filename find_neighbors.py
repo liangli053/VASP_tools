@@ -56,7 +56,7 @@ def find_neighbors(ctrAtom, cutoff, POSCAR="POSCAR"):
     latt_para = abc * scaling_para
     # Lines 6 and 7 of POSCAR. atomic species and corresponding atoms numbers
     atomNames = poscar[5].split()
-    atomNums = list(map(lambda x: int(x), poscar[6].split()))
+    atomNums = list(map(int, poscar[6].split()))
     # combine atom names and numbers into a dict
     atomNum_Dict = dict(zip(atomNames, atomNums))
     # read in the coordinates of each species
