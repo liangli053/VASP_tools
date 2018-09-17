@@ -47,7 +47,7 @@ def find_neighbors(ctrAtom, cutoff, POSCAR="POSCAR"):
     length_a, length_b, length_c = latt_consts
     # calculate distances to the central atom
     res = dict.fromkeys(atomCoor_Dict, {})
-    for i in atomCoor_Dict.keys():
+    for i in atomCoor_Dict:
         res[i] = {}  # avoid name-binding problem!
         for coor in atomCoor_Dict[i]:
             currCoor = coor.reshape((1, 3))
