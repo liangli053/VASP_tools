@@ -3,7 +3,7 @@ from Parse_POSCAR import parse_POSCAR
 
 
 def create_supercell(POSCAR, repetitions):
-    """ Create supercell from POSCAR.
+    """ Create supercell from POSCAR. Supports VASP 5 only.
         Generate a outputfile named POSCAR_NxNyNz.vasp.
         Nx, Ny and Nz are the repetitions along x, y and z.
 
