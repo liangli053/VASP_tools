@@ -44,7 +44,9 @@ def create_supercell(POSCAR, repetitions):
 
 
 def repeat_N(coords, repetitions):
-    """
+    """ Compute atom coordinates for the supercell.
+        Size dictated by repetitions [Nx, Ny, Nz].
+
         Arguments:
         -----------------
         coords : array[float], dim = (natom, 3)
