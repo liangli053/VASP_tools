@@ -28,7 +28,7 @@ def create_supercell(POSCAR, repetitions):
         output_coords[atom] = coords_after_reps
 
     # write to file
-    foo = '_' + str(repetitions[0]) + str(repetitions[1]) + str(repetitions[2])
+    foo = '_' + ''.join(str(i) for i in repetitions)
     with open("POSCAR" + foo + ".vasp", 'w') as fout:
         fout.write("supercell" + '\n'
                    "  1.000" + '\n')
@@ -82,3 +82,6 @@ def repeat_N(coords, repetitions):
     # sort the coordinate according to Z value
     coords = coords[coords[:, 2].argsort()]
     return coords
+
+
+create_supercell("POSCAR", [2,2,2])
